@@ -1,4 +1,211 @@
-/*@import "fonts";*/
+@import "vars";
+@import "fonts";
 
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+body {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    background-color: var(--bg-light);
+    color: var(--dark);
+}
+
+a {
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    text-decoration: none;
+}
+
+.container {
+    padding: 0 32px;
+}
+
+.header {
+    padding-top: 70px;
+    &-top {
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto 1fr auto auto;
+        margin-bottom: 242px;
+    }
+}
+
+.burger-menu {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-right: 24px;
+    &__icon {
+        position: relative;
+        width: 24px;
+        height: 3px;
+        background-color: var(--dark);
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            width: 24px;
+            height: 3px;
+            background-color: var(--dark);
+        }
+        &::before {
+            top: -8px;
+            left: 0;
+        }
+        &::after {
+            top: 8px;
+            left: 0;
+        }
+    }
+}
+
+.menu {
+    &-list {
+        display: flex;
+        flex-direction: row;
+        display: none;
+    }
+}
+
+.title {
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 68px;
+    letter-spacing: 0.05em;
+    margin-bottom: 32px;
+}
+
+.paragraph {
+    margin-bottom: 22px;
+}
+
+.link {
+    &_blue {
+        color: var(--blue);
+    }
+    &_arrowed {
+        &::after {
+            content: '';
+            display: inline-block;
+            margin-left: 8px;
+            width: 16px;   
+            height: 12px;
+            background: url('../img/icons/icons.svg#arrow-blue') center center/cover no-repeat;
+        }
+    }
+}
+
+.bg-pink {
+    background-color: var(--pink);
+    position: absolute;
+    width: 183px;
+    height: 514px;
+    right: 0px;
+    top: -58px;
+    z-index: -2;
+}
+.bg-blue {
+    position: absolute;
+    width: 355px;
+    height: 72px;
+    left: 0px;
+    top: 423px;
+    background: var(--blue-highlight);
+    z-index: -1;
+}
+.bg-mac-img {
+    position: absolute;
+    width: 137px;
+    height: 96px;
+    right: 0px;
+    top: 140px;
+    background: url('../img/mac-m2x.jpg') center center/cover no-repeat;
+}
+.bg-girl-img {
+    position: absolute;
+    width: 137px;
+    height: 96px;
+    right: 76px;
+    top: 327px;
+    background: url('../img/girl-m2x.jpg') center center/cover no-repeat;
+    background-color: var(--blue);
+    color: var(--pink);
+    z-index: -1;
+}
 
 @import "media768";
