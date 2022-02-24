@@ -1,0 +1,109 @@
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1344px;
+        margin: 0 auto 120px;
+    }
+
+    .header {
+        &-top {
+            margin-bottom: 221px;
+        }
+    }
+
+    .burger-menu {
+        display: none;
+    }
+    .menu {
+        &-list {
+            display: flex;
+            flex-direction: row;
+            gap: 28px;
+            justify-content: flex-end;
+        }
+        margin-right: 28px;
+    }
+
+    .title-wrapper {
+        margin-bottom: 47px;
+    }
+    .title {
+        font-size: 124px;
+        line-height: 150px;
+    }
+
+    .paragraph {
+        &_m {
+            display: none;
+        }
+        &_d {
+            display: block;
+        }
+    }
+
+    .header-bottom {
+        & .paragraph {
+            max-width: 494px;
+        }
+    }
+
+    .bg-pink {
+        width: 775px;
+        height: 926px;
+        right: 0px;
+        top: -58px;
+    }
+    .bg-blue {
+        width: 1031px;
+        height: 154px;
+        left: -160px;
+        top: 491px;
+    }
+    .bg-mac-img {
+        width: 376px;
+        height: 263px;
+        right: 0px;
+        top: 605px;
+        background: url('../img/mac-d2x.jpg') center center/cover no-repeat;
+    }
+    .bg-girl {
+        width: 376px;
+        height: 263px;
+        right: 460px;
+        top: 228px;
+        &__img {
+            width: 376px;
+            height: 263px;
+            background-color: #5f2a26;
+            background: url('../img/girl-d2x.jpg') center center/cover no-repeat;
+        }
+        &__accent {
+            width: 376px;
+            height: 263px;
+            top: 8px;
+            left: 8px;
+        }
+    }
+
+    .partners-list {
+        &__item {
+            margin: 0;
+            & img {
+                width: auto;
+                height: 40px;
+            }
+            &:nth-child(2) {
+                width: 152px;
+            }
+            &:nth-child(3) {
+                width: 194px;
+            }
+            &:nth-child(4) {
+                width: 154px;
+            }
+            &:last-child {
+                width: 130px;
+                display: block;
+            }
+        }
+    }
+}
