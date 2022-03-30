@@ -165,7 +165,13 @@ a {
     }
 }
 
-.paragraph_d {
+.subtitle {
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 400;
+}
+
+.display_d {
     display: none;
 }
 .header-paragraph {
@@ -203,7 +209,7 @@ a {
     top: -58px;
     z-index: -5;
 }
-.bg-blue {
+.bg-blue_overlay {
     position: absolute;
     width: 355px;
     height: 72px;
@@ -277,9 +283,6 @@ a {
         &:nth-child(6) {
             display: none;
         }
-        &-wrapper {
-            
-        }
     }  
 }
 
@@ -290,7 +293,7 @@ a {
         padding: 64px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         gap: 24px;
     }
     &__icon {
@@ -300,6 +303,21 @@ a {
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+    &__date {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    &_dark {
+        color: #fff;
+        .card-wrapper {
+            background-color: var(--dark);
+        }
+    }
+    &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
     }
 }
 
@@ -330,5 +348,54 @@ a {
     }
 }
 
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+
+.collab {
+    position: relative;
+    padding-top: 165px;
+    .title {
+        color: var(--blue);
+    }
+    .bg-mac-img {
+        top: 0;
+    }
+    .bg-girl {
+        right: 161px;
+        top: 142px;
+        &__accent {
+            background-color: var(--blue);
+            position: absolute;
+            width: 137px;
+            height: 96px;
+            top: 3px;
+            left: 3px;
+            z-index: -4;
+        }
+    }
+}
+.bg-grey {
+    position: absolute;
+    width: 215px;
+    height: 271px;
+    right: 0px;
+    top: 0;
+    background-color: #ccc;
+    z-index: -5;
+}
+.bg-pink_overlay {
+    position: absolute;
+    width: 270px;
+    height: 72px;
+    left: 0px;
+    top: 238px;
+    background: var(--pink);
+    mix-blend-mode: overlay;
+    z-index: -3;
+}
 
 @import "media1024";
