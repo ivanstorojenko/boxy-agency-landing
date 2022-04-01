@@ -230,4 +230,24 @@
         left: -160px;
         top: 263px;
     }
+
+
+    .footer {
+        &-wrapper {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 120px;
+        }
+        &-menu-list {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: none;
+            column-gap: 150px;
+        }
+        &-end {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
 }
