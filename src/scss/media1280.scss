@@ -1,4 +1,4 @@
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
     .container {
         max-width: 1344px;
         margin: 0 auto 120px;
@@ -6,6 +6,7 @@
 
     .header {
         &-top {
+            grid-template-columns: max-content 1fr max-content;
             margin-bottom: 221px;
         }
     }
@@ -47,9 +48,8 @@
     }
 
     .bg-pink {
-        width: 775px;
+        width: 760px;
         height: 926px;
-        right: 0px;
         top: -58px;
     }
     .bg-blue_overlay {
@@ -68,6 +68,7 @@
     .bg-girl {
         width: 376px;
         height: 263px;
+        left: unset;
         right: 460px;
         top: 228px;
         &__img {
@@ -86,9 +87,7 @@
 
     .partners-list {
         &__item {
-            margin: 0;
             & img {
-                width: auto;
                 height: 40px;
             }
             &:nth-child(2) {
@@ -174,9 +173,7 @@
         }
     }
     .img-wrapper {
-        background: #fff;
         height: 748px;
-        grid-row: 1/2;
     }
 
     .news-list {
@@ -191,15 +188,10 @@
 
 
     .collab {
-        position: relative;
-        padding-top: 108px;
         .title {
-            display: inline-block;
             width: 719px;
         }
         .bg-mac-img {
-            top: unset;
-            bottom: 0;
             width: 376px;
             height: 263px;
         }
@@ -209,20 +201,16 @@
             width: 376px;
             height: 263px;
             &__accent {
-                background-color: var(--blue);
-                position: absolute;
                 width: 376px;
                 height: 263px;
-                top: 8px;
-                left: 8px;
-                z-index: -4;
             }
         }
     }
     .bg-grey {
-        width: 775px;
+        width: 760px;
         height: 586px;
-        top: 61px;
+        top: unset;
+        bottom: 0;
     }
     .bg-pink_overlay {
         width: 1031px;
@@ -240,14 +228,7 @@
             gap: 120px;
         }
         &-menu-list {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: none;
             column-gap: 150px;
-        }
-        &-end {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
         }
     }
 }

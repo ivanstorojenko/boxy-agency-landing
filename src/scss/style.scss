@@ -101,8 +101,14 @@ a {
     &-top {
         display: grid;
         align-items: center;
-        grid-template-columns: auto 1fr auto auto;
-        margin-bottom: 242px;
+        grid-template-columns: 24px auto;
+        column-gap: 24px;
+        row-gap: 24px;
+        margin-bottom: 168px;
+        & .link {
+            grid-column: 1/3;
+            grid-row: 2/3;
+        }
     }
 }
 
@@ -211,7 +217,7 @@ a {
 }
 .bg-blue_overlay {
     position: absolute;
-    width: 355px;
+    width: 300px;
     height: 72px;
     left: 0px;
     top: 423px;
@@ -232,7 +238,7 @@ a {
     position: absolute;
     width: 137px;
     height: 96px;
-    right: 76px;
+    right: 85px;
     top: 327px;
     &__img {
         width: 137px;
@@ -283,6 +289,9 @@ a {
         &:nth-child(6) {
             display: none;
         }
+        &__img {
+            width: 100%;
+        }
     }  
 }
 
@@ -290,7 +299,7 @@ a {
     &-wrapper {
         height: 100%;
         background-color: var(--card-light);
-        padding: 64px;
+        padding: 30px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -342,7 +351,7 @@ a {
     &__img {
         position: absolute;
         width: auto;
-        height: 380px;
+        height: 280px;
         right: 32px;
         bottom: -64px;
     }
@@ -445,4 +454,7 @@ a {
     color: var(--middleText);
 }
 
-@import "media1024";
+@import "media375";
+@import "media428";
+@import "media768";
+@import "media1280";

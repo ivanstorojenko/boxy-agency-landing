@@ -1,0 +1,26 @@
+@media (min-width: 428px) {
+    .bg-blue_overlay {
+        width: 355px;
+    }
+
+    .header {
+        &-top {
+            grid-template-columns: 24px auto auto;
+            row-gap: unset;
+            margin-bottom: 242px;
+            & .link {
+            grid-column: 3/4;
+            grid-row: 1/2;
+            justify-self: end;
+        }
+        }
+    }
+
+    .card-wrapper {
+        padding: 64px;
+    }
+
+    .experience__img {
+        height: 380px;
+    }
+}
