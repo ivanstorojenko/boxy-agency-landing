@@ -291,19 +291,20 @@ a {
         }
         &__img {
             width: 100%;
+            object-fit: cover;
         }
     }  
 }
 
 .card {
     &-wrapper {
-        height: 100%;
         background-color: var(--card-light);
         padding: 30px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 24px;
+        height: 100%;
     }
     &__icon {
             object-fit: cover;
